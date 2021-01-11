@@ -30,9 +30,9 @@ body {
   background-repeat: no-repeat;
   overflow-x: hidden; }
   body::-webkit-scrollbar {
-    width: 5px; }
+    width: 10px; }
   body::-webkit-scrollbar-thumb {
-    background-color: #ddd; }
+    background-color: #ccc; }
   body .header {
     display: -webkit-box;
     display: -ms-flexbox;

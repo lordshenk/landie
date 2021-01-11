@@ -13,10 +13,10 @@ body {
     background-repeat: no-repeat;
     overflow-x: hidden;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 10px;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: #ddd;
+        background-color: #ccc;
     }
 
     .header {
