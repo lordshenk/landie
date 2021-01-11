@@ -89,6 +89,7 @@ body {
     height: 1110px; }
     body .intro .content {
       margin-left: 165px;
+      padding-top: 300px;
       width: 540px; }
       body .intro .content .text-content {
         margin-bottom: 70px; }
@@ -119,13 +120,16 @@ body {
           color: #091133; }
   body .section-1 {
     height: 742px;
-    background-image: url(../assets/bg-2.svg);
-    background-size: 540px auto;
-    background-repeat: no-repeat;
-    background-position: 735px 110px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 165px; }
     body .section-1 .content {
       padding-top: 160px;
-      margin-left: 165px;
+      margin-right: 30px;
       width: 540px; }
       body .section-1 .content .title {
         font-weight: 500;
@@ -160,19 +164,24 @@ body {
             font-size: 12px;
             line-height: 18px;
             color: #5d6970; }
+    body .section-1 .bg {
+      padding-top: 110px;
+      width: 540px;
+      height: auto; }
   body .section-2,
   body .section-3,
   body .section-4 {
     height: 569px;
-    background-image: url(../assets/bg-3.svg);
-    background-size: 480px auto;
-    background-repeat: no-repeat;
-    background-position: 191px 122px; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     body .section-2 .content,
     body .section-3 .content,
     body .section-4 .content {
       width: 445px;
-      margin-left: 826px;
       padding-top: 172px; }
       body .section-2 .content .title,
       body .section-3 .content .title,
@@ -188,19 +197,22 @@ body {
         font-size: 16px;
         line-height: 26px;
         color: #6F7CB2; }
-  body .section-3 {
-    background-image: url(../assets/bg-4.svg); }
-  body .section-4 {
-    background-image: url(../assets/bg-5.svg); }
-    body .section-4 .purchase-btn {
-      width: 150px;
-      height: 32px;
-      background-color: #111B47;
-      margin-top: 40px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 24px;
-      color: #ffffff; }
+    body .section-2 .bg,
+    body .section-3 .bg,
+    body .section-4 .bg {
+      width: 480px;
+      height: auto;
+      margin-right: 155px;
+      padding-top: 122px; }
+  body .section-4 .purchase-btn {
+    width: 150px;
+    height: 32px;
+    background-color: #111B47;
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff; }
   body .purchase {
     height: 804px;
     display: -webkit-box;
@@ -327,3 +339,50 @@ body {
             width: 16px;
             margin-left: 30px;
             cursor: pointer; }
+  @media screen and (max-width: 992px) {
+    body .header {
+      padding: 0 50px; }
+      body .header .navbar button:nth-child(2) {
+        margin: 0 30px; }
+    body .intro .content {
+      margin-left: 50px; }
+    body .section-1 {
+      padding: 0 50px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      body .section-1 .content {
+        padding-top: 100px;
+        margin: 0; }
+      body .section-1 .bg {
+        padding: 0;
+        width: 300px; }
+    body .section-2,
+    body .section-3,
+    body .section-4 {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      body .section-2 .bg,
+      body .section-3 .bg,
+      body .section-4 .bg {
+        padding-top: 150px;
+        margin: 0;
+        width: 300px; }
+      body .section-2 .content,
+      body .section-3 .content,
+      body .section-4 .content {
+        margin-top: 50px;
+        padding: 0; } }
+
+@media screen and (max-width: 992px) {
+  body {
+    background-size: auto 700px; } }

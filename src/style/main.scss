@@ -68,6 +68,7 @@ body {
         height: 1110px;
         .content {
             margin-left: 165px;
+            padding-top: 300px;
             width: 540px;
             .text-content {
                 margin-bottom: 70px;
@@ -108,13 +109,12 @@ body {
     }
     .section-1 {
         height: 742px;
-        background-image: url(../assets/bg-2.svg);
-        background-size: 540px auto;
-        background-repeat: no-repeat;
-        background-position: 735px 110px;
+        display: flex;
+        justify-content: center;
+        padding: 0 165px;
         .content {
             padding-top: 160px;
-            margin-left: 165px;
+            margin-right: 30px;
             width: 540px;
             .title {
                 font-weight: 500;
@@ -156,18 +156,20 @@ body {
                 }
             }
         }
+        .bg {
+            padding-top: 110px;
+            width: 540px;
+            height: auto;
+        }
     }
     .section-2,
     .section-3,
     .section-4 {
         height: 569px;
-        background-image: url(../assets/bg-3.svg);
-        background-size: 480px auto;
-        background-repeat: no-repeat;
-        background-position: 191px 122px;
+        display: flex;
+        justify-content: center;
         .content {
             width: 445px;
-            margin-left: 826px;
             padding-top: 172px;
             .title {
                 font-weight: 500;
@@ -182,12 +184,14 @@ body {
                 color: $secondary-text;
             }
         }
-    }
-    .section-3 {
-        background-image: url(../assets/bg-4.svg);
+        .bg {
+            width: 480px;
+            height: auto;
+            margin-right: 155px;
+            padding-top: 122px;
+        }
     }
     .section-4 {
-        background-image: url(../assets/bg-5.svg);
         .purchase-btn {
             width: 150px;
             height: 32px;
@@ -327,5 +331,51 @@ body {
                 }
             }
         }
+    }
+    @include res_tablet {
+        .header {
+            padding: 0 50px;
+            .navbar button:nth-child(2) {
+                margin: 0 30px;
+            }
+        }
+        .intro {
+            .content {
+                margin-left: 50px;
+            }
+        }
+        .section-1 {
+            padding: 0 50px;
+            flex-direction: column-reverse;
+            align-items: center;
+            .content {
+                padding-top: 100px;
+                margin: 0;
+            }
+            .bg {
+                padding: 0;
+                width: 300px;
+            }
+        }
+        .section-2,
+        .section-3,
+        .section-4 {
+            flex-direction: column;
+            align-items: center;
+            .bg {
+                padding-top: 150px;
+                margin: 0;
+                width: 300px;
+            }
+            .content {
+                margin-top: 50px;
+                padding: 0;
+            }
+        }
+    }
+}
+@include res_tablet {
+    body {
+        background-size: auto 700px;
     }
 }
