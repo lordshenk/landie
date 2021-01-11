@@ -1,0 +1,10 @@
+@mixin res_moblie {
+    @media screen and (max-width: 576px){
+        @content;
+    } 
+}
+@mixin res_tablet {
+    @media screen and (max-width: 992px){
+        @content;
+    } 
+}
