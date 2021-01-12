@@ -30,6 +30,10 @@ body {
         z-index: 99;
         background: transparent;
         transition: background 0.5s ease;
+        > img {
+            display: none;
+            filter: invert(37%) sepia(71%) saturate(365%) hue-rotate(190deg) brightness(86%) contrast(91%);
+        }
         .navbar {
             display: flex;
             align-items: center;
@@ -212,14 +216,14 @@ body {
         background: #e7ecff;
         position: relative;
         .curve {
-            width: 110%;
+            width: 100%;
             height: 150px;
             position: absolute;
             top: -10%;
             left: 50%;
             transform: translateX(-50%);
             background: #ffffff;
-            border-radius: 50%;
+            border-radius: 40%;
         }
         .title {
             font-weight: 500;
@@ -362,6 +366,7 @@ body {
         .section-4 {
             flex-direction: column;
             align-items: center;
+            margin-top: 100px;
             .bg {
                 padding-top: 150px;
                 margin: 0;
@@ -373,9 +378,186 @@ body {
             }
         }
     }
+    @include res_mobile {
+        .header {
+            padding: 0 30px;
+            > img {
+                display: inline-block;
+                width: 20px;
+                height: auto;
+            }
+            .navbar {
+                display: none;
+            }
+            .logo {
+                font-size: 22px;
+            }
+            .buy-now-btn {
+                width: 70px;
+            }
+        }
+        .intro {
+            .content {
+                margin-left: 30px;
+                padding-top: 200px;
+                width: 300px;
+                .text-content {
+                    margin-bottom: 70px;
+                    p:first-child {
+                        font-weight: 500;
+                        font-size: 30px;
+                        letter-spacing: 1px;
+                        color: $primary-text;
+                        margin-bottom: 20px;
+                    }
+                    p:last-child {
+                        font-size: 16px;
+                        color: #505f98;
+                    }
+                }
+                .btn-action {
+                    display: flex;
+                    button {
+                        width: 140px;
+                        font-size: 14px;
+                        &:nth-child(1) {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .section-1 {
+            padding: 0 30px;
+            .content {
+                padding-top: 100px;
+                width: 300px;
+                .title {
+                    font-size: 30px;
+                }
+                .action {
+                    > div {
+                        &:nth-child(1) {
+                            margin-right: 30px;
+                        }
+                        img {
+                            width: 26px;
+                            height: 26px;
+                        }
+                        p:nth-child(2) {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .bg {
+                padding-top: 50px;
+                width: 250px;
+                height: auto;
+            }
+        }
+        .section-2,
+        .section-3,
+        .section-4 {
+            margin-top: 150px;
+            align-items: center;
+            .content {
+                width: 300px;
+                .title {
+                    font-weight: 500;
+                    font-size: 30px;
+                }
+                .text {
+                    font-size: 16px;
+                }
+            }
+            .bg {
+                width: 250px;
+                height: auto;
+                margin-right: 0px;
+                padding-top: 122px;
+            }
+        }
+        .section-4 {
+            .purchase-btn {
+                width: 150px;
+                margin-top: 40px;
+                font-size: 14px;
+            }
+        }
+        .purchase {
+            margin-top: 150px;
+            .curve {
+                width: 100%;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #ffffff;
+                border-radius: 40%;
+            }
+            .title {
+                font-size: 30px;
+            }
+            .text {
+                width: 300px;
+            }
+            .price {
+                margin-bottom: 60px;
+                span:first-child {
+                    font-size: 40px;
+                }
+            }
+            .purchase-btn {
+                width: 150px;
+            }
+        }
+        .footer {
+            padding: 60px 30px 0;
+            height: 216px;
+            background: #e7ecff;
+            > div:nth-child(1) {
+                p:nth-child(1) {
+                    font-size: 10px;
+                }
+                .logo {
+                    font-weight: 900;
+                    font-size: 26px;
+                }
+                .purchase-btn {
+                    width: 100px;
+                }
+            }
+            hr {
+                & + div {
+                    .nav {
+                        p {
+                            display: inline-block;
+                            font-size: 14px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .social {
+                        margin-left: auto;
+                        img {
+                            height: 14px;
+                            width: 14px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @include res_tablet {
     body {
         background-size: auto 700px;
+    }
+}
+@include res_mobile {
+    body {
+        background-size: auto 500px;
     }
 }
